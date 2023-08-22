@@ -1,0 +1,25 @@
+.section-title-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    --tw-text-opacity: 1;
+}
+
+.section-heading {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: 768px) {
+        font-size: 3rem;
+        line-height: 1;
+    }
+}

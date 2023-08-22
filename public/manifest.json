@@ -1,0 +1,10 @@
+{
+  "theme_color": "#7000FF",
+  "background_color": "#120E16",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Portfolio | Sravya Dara",
+  "short_name": "Sravya Dara",
+  "description": "Sravya Dara's Portfolio Website."
+}
