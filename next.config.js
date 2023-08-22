@@ -1,36 +1,40 @@
-// const withPWA = require("next-pwa");
+const withPWA = require("next-pwa");
 
-// const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === "production";
 
-// const nextConfig = {
-//   pwa: {
-//     dest: "public",
-//     register: true,
-//     skipWaiting: true,
-//     disable: !isProd,
+const nextConfig = {
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    disable: !isProd,
+  },
+};
+
+module.exports = withPWA({
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(mp3|wav)$/i,
+      use: {
+        loader: "url-loader",
+      },
+    });
+
+    return config;
+  },
+  ...nextConfig,
+});
+
+
+// const repo = 'Portfolio'
+// const assetPrefix = `/${repo}/`
+// const basePath = `/${repo}`
+
+// module.exports = {
+//   assetPrefix: assetPrefix,
+//   basePath: basePath,
+//   images: {
+//     loader: 'imgix',
+//     path: '/',
 //   },
-// };
-
-// module.exports = withPWA({
-//   webpack: (config) => {
-//     config.module.rules.push({
-//       test: /\.(mp3|wav)$/i,
-//       use: {
-//         loader: "url-loader",
-//       },
-//     });
-
-//     return config;
-//   },
-//   ...nextConfig,
-// });
-
-
-const repo = 'Portfolio'
-const assetPrefix = `/${repo}/`
-const basePath = `/${repo}`
-
-module.exports = {
-  assetPrefix: assetPrefix,
-  basePath: basePath,
-}
+// }
