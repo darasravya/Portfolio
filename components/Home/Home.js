@@ -79,17 +79,11 @@ const Home = () => {
         <div style={{width: '100%', height: '100%', position: 'relative'}}>
           <Image
             className="absolute w-full h-full top-0 left-0 object-fill"
-            src="/web6.svg"
-            alt="imaggg"
+            src="/home-bg.svg"
+            alt="bg"
             layout='fill'
           />
         </div>
-
-        {/* <img
-          src="/web6.svg"
-          alt="imaggg"
-          className="absolute w-full h-full top-0 left-0 object-fill"
-        /> */}
       </div>
     </section>
   );
