@@ -1,4 +1,4 @@
-export const heroOptions = {
+export const pOptions = {
     autoPlay: true,
 
     fullScreen: {
