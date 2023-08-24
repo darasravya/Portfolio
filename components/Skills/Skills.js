@@ -1,12 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MENULINKS, SKILLS, skillCategory } from "../../constants";
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const Skills = () => {
+const Skills = forwardRef((props, ref) => {
   const targetSection = useRef(null);
+
+  useEffect(function () {
+    ref.current = targetSection.current;
+  }, [targetSection.current]);
 
 
   useEffect(() => {
@@ -57,7 +61,7 @@ const Skills = () => {
       id={MENULINKS[1].ref}
       ref={targetSection}
     >
-      <div className="section-container py-16 flex flex-col justify-center">
+      <div className="section-container md:py-16 pt-4 pb-16 flex flex-col justify-center">
         <img
           src="/right-pattern.svg"
           alt=""
@@ -79,6 +83,6 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Skills;

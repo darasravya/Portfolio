@@ -2,24 +2,24 @@
   animation: fadeAppear 1s 0.2s;
 }
 
-.name{
-    line-height: 1.5em;
-    animation: fadeAppear 1.3s 0.3s;
+.name {
+  line-height: 1.5em;
+  animation: fadeAppear 1.3s 0.3s;
 
-    .emphasize {
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0.7rem;
-            left: 0;
-            width: 100%;
-            height: 0.35rem;
-            border-radius: 1rem;
-            background-image: linear-gradient(to right, theme("colors.indigo.light"), theme("colors.indigo.dark"));
-            box-shadow: 0 0 1rem theme("colors.indigo.dark");
-            animation: growHorizontal 1.3s cubic-bezier(0.9, 0, 0.5, 0.9) 0.8s;
-        }
+  .emphasize {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0.7rem;
+      left: 0;
+      width: 100%;
+      height: 0.35rem;
+      border-radius: 1rem;
+      background-image: linear-gradient(to right, theme("colors.indigo.light"), theme("colors.indigo.dark"));
+      box-shadow: 0 0 1rem theme("colors.indigo.dark");
+      animation: growHorizontal 1.3s cubic-bezier(0.9, 0, 0.5, 0.9) 0.8s;
     }
+  }
 }
 
 
@@ -38,11 +38,86 @@
 }
 
 @keyframes growHorizontal {
-    from {
-      width: 0;
-    }
-    to {
-      width: 98%; 
-    }
+  from {
+    width: 0;
   }
 
+  to {
+    width: 98%;
+  }
+}
+
+.arrows {
+  width: 42px;
+  height: 75px;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 14px);
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    left: unset
+  }
+
+  path {
+    stroke: rgba(112, 0, 255, 0.75);
+    fill: transparent;
+    stroke-width: 6px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+
+    &.a1 {
+      animation-delay: -1s;
+      -webkit-animation-delay: -1s;
+      /* Safari & Chrome */
+    }
+
+    &.a2 {
+      animation-delay: -0.5s;
+      -webkit-animation-delay: -0.5s;
+      /* Safari & Chrome */
+    }
+
+    &.a3 {
+      animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      /* Safari & Chrome */
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0
+  }
+
+  40% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0
+  }
+
+  40% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}

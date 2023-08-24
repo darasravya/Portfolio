@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Typed from "typed.js";
 import { gsap, Linear } from "gsap";
@@ -7,7 +7,9 @@ import styles from "./Home.module.scss";
 import Button from "../Button/Button";
 import Profiles from "../Profiles/Profiles";
 
-const Home = () => {
+const Home = ({ skillsRef }) => {
+
+  const [isVisible, setIsVisible] = useState(true)
 
   const typedEl = useRef(null);
   const targetSection = useRef(null);
@@ -34,6 +36,17 @@ const Home = () => {
 
     return () => typed.destroy();
   }, [typedEl, targetSection]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenOnScroll);
+    return () =>
+      window.removeEventListener("scroll", listenOnScroll);
+  }, [])
+
+  const listenOnScroll = () => {
+    isVisible && setIsVisible(false);
+    !document.documentElement.scrollTop && setIsVisible(true)
+  }
 
   return (
     <section
@@ -76,7 +89,7 @@ const Home = () => {
         </div>
       </div>
       <div className="absolute invisible w-3/5 bottom-1.5 lg:visible lg:right-0 2xl:right-16 h-4/5 opacity-80">
-        <div style={{width: '100%', height: '100%', position: 'relative'}}>
+        <div style={{ width: '100%', height: '100%', position: 'relative' }}>
           <Image
             className="absolute w-full h-full top-0 left-0 object-fill"
             src="/home-bg.svg"
@@ -85,6 +98,14 @@ const Home = () => {
           />
         </div>
       </div>
+      {isVisible && <div id='scroll-arrow' onClick={() => { skillsRef.current && skillsRef.current.scrollIntoView() }} className={styles.arrows}>
+        <svg>
+          <path className={styles.a1} d="M0 0 L20 22 L40 0"></path>
+          <path className={styles.a2} d="M0 20 L20 42 L40 20"></path>
+          <path className={styles.a3} d="M0 40 L20 62 L40 40"></path>
+        </svg>
+      </div>}
+
     </section>
   );
 };

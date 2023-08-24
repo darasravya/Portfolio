@@ -10,7 +10,7 @@
 
 👨‍🎓 A developer Portfolio, Built on NextJS, GSAP, Tailwind and React 
 
-### ✨ [Live Demo](http://www.sravyadara.me/)
+### ✨ [Visit the portfolio here](http://www.sravyadara.me/)
 
 ## Getting Started 
 

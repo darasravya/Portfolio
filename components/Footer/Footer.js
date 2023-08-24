@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Fade } from "react-reveal";
 import { gsap, Linear } from "gsap";
 import Button from "../Button/Button";
@@ -28,7 +28,7 @@ const Footer = () => {
     >
       <FooterBg />
       <Fade bottom distance={"4rem"}>
-        <div className="w-full h-full pt-32">
+        <div className="w-full h-full pt-10">
           <div className="section-container flex flex-col h-full justify-end z-10 items-center py-12">
             <h1 className="font-medium text-3xl md:text-4xl text-center seq">
               Feel free to connect on social media.
@@ -47,23 +47,14 @@ const Footer = () => {
             </div>
             <p className="text-center text-white text-sm sm:text-base font-medium tracking-wide mt-8">
               Developed with{" "}
-              <span className=" heart-btn">
-                <span role="img" aria-label="heart" className="animate-pulse">
-                  ❤️
-                </span>
+              <span role="img" aria-label="heart" className="text-xs sm: text-sm animate-pulse">
+                ❤️
               </span>{" "}
-              by <span className="text-white">Sravya Dara</span>
+              by Sravya Dara
             </p>
           </div>
         </div>
       </Fade>
-      <img
-        src="/footer-curve.svg"
-        className="w-full rotate-180"
-        alt=""
-        loading="eager"
-        height={180}
-      />
       <style data-jsx data-global>{`
         footer {
           background-image: linear-gradient(270deg, #9f55ff, #7000ff, #8b31ff);

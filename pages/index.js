@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Meta from "@/components/Seo/Meta";
 import Loader from "@/components/Loader/Loader";
@@ -25,6 +25,8 @@ export default function App() {
   const [isDesktop, setIsDesktop] = useState(true);
   const [clientHeight, setClientHeight] = useState(0);
   const [clientWidth, setClientWidth] = useState(0);
+
+  const skillsRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -60,8 +62,8 @@ export default function App() {
             <ProgressIndicator />
             <main className="flex flex-col">
               <Particles />
-              <Home />
-              <Skills />
+              <Home skillsRef={skillsRef}/>
+              <Skills ref={skillsRef}/>
               <About clientHeight={clientHeight} />
               <Timeline isDesktop={isDesktop} />
               <Collaboration clientHeight={clientHeight} />

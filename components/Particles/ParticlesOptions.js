@@ -9,98 +9,98 @@ export const pOptions = {
     detectRetina: true,
     fpsLimit: 120,
 
-    // interactivity: {
-    //     // detectsOn: '#hero',
-    //     events: {
-    //         onDiv: [
-    //             {
-    //                 selectors: '#repulse-div',
-    //                 enable: true,
-    //                 mode: 'bounce',
-    //                 type: 'circle',
-    //             },
-    //             {
-    //                 selectors: '#repulse-div',
-    //                 enable: true,
-    //                 mode: 'repulse',
-    //                 type: 'circle',
-    //             },
-    //             {
-    //                 selectors: '#repulse-span',
-    //                 enable: true,
-    //                 mode: 'repulse',
-    //                 type: 'circle',
-    //             },
-    //             {
-    //                 selectors: '#repulse-span',
-    //                 enable: true,
-    //                 mode: 'bounce',
-    //                 type: 'circle',
-    //             },
-    //             {
-    //                 selectors: '#togglebutton',
-    //                 enable: true,
-    //                 mode: 'repulse',
-    //                 type: 'circle',
-    //             },
-    //             {
-    //                 selectors: '#togglebutton',
-    //                 enable: true,
-    //                 mode: 'bounce',
-    //                 type: 'circle',
-    //             },
-    //             {
-    //                 selectors: '#scroller',
-    //                 enable: true,
-    //                 mode: 'repulse',
-    //                 type: 'circle',
-    //             },
-    //             {
-    //                 selectors: '#scroller',
-    //                 enable: true,
-    //                 mode: 'bounce',
-    //                 type: 'circle',
-    //             },
-    //         ],
+    interactivity: {
+        // detectsOn: '#hero',
+        events: {
+            onDiv: [
+                {
+                    selectors: '#repulse-div',
+                    enable: true,
+                    mode: 'bounce',
+                    type: 'circle',
+                },
+                {
+                    selectors: '#repulse-div',
+                    enable: true,
+                    mode: 'repulse',
+                    type: 'circle',
+                },
+                {
+                    selectors: '#repulse-span',
+                    enable: true,
+                    mode: 'repulse',
+                    type: 'circle',
+                },
+                {
+                    selectors: '#repulse-span',
+                    enable: true,
+                    mode: 'bounce',
+                    type: 'circle',
+                },
+                {
+                    selectors: '#togglebutton',
+                    enable: true,
+                    mode: 'repulse',
+                    type: 'circle',
+                },
+                {
+                    selectors: '#togglebutton',
+                    enable: true,
+                    mode: 'bounce',
+                    type: 'circle',
+                },
+                {
+                    selectors: '#scroller',
+                    enable: true,
+                    mode: 'repulse',
+                    type: 'circle',
+                },
+                {
+                    selectors: '#scroller',
+                    enable: true,
+                    mode: 'bounce',
+                    type: 'circle',
+                },
+            ],
 
-    //         onHover: {
-    //             enable: true,
-    //             mode: 'bubble',
-    //             parallax: {
-    //                 enable: true,
-    //                 force: 350,
-    //                 smooth: 20,
-    //             },
-    //         },
-    //         resize: {
-    //             delay: 0.5,
-    //             enable: true,
-    //         },
-    //     },
+            // onHover: {
+            //     enable: true,
+            //     mode: 'bubble',
+            //     parallax: {
+            //         enable: true,
+            //         force: 350,
+            //         smooth: 20,
+            //     },
+            // },
+            resize: {
+                delay: 0.5,
+                enable: true,
+            },
+        },
 
-    //     modes: {
-    //         bounce: {
-    //             distance: 100,
-    //         },
-    //         bubble: {
-    //             distance: 100,
-    //             duration: 0.4,
-    //             size: 40,
-    //             color: {
-    //                 value: '#cbbde5',
-    //             },
-    //             opacity: 8,
-    //             mix: false,
-    //         },
+        modes: {
+            bounce: {
+                distance: 100,
+            },
+            // bubble: {
+            //     distance: 100,
+            //     duration: 0.4,
+            //     size: 20,
+            //     color: {
+            //         value: '#cbbde5',
+            //     },
+            //     opacity: 3,
+            //     mix: false,
+            // },
 
-    //         repulse: {
-    //             distance: 200,
-    //             factor: 200,
-    //             speed: 1,
-    //             maxSpeed: 50,
-    //         },
-    //     },
-    // },
+            repulse: {
+                distance: 200,
+                factor: 200,
+                speed: 1,
+                maxSpeed: 50,
+            },
+        },
+    },
 
     particles: {
         collisions: {
@@ -152,72 +152,41 @@ export const pOptions = {
             },
         },
 
-        // shape: {
-        //     type: "image",
-        //     options: {
-        //         image: [{
-        //             src: '/skills/nextjs.svg',
-        //             width: 202,
-        //             height: 200
-        //         }, {
-        //             src: '/skills/html.svg',
-        //             width: 500,
-        //             height: 504
-        //         }, {
-        //             src: '/skills/react.svg',
-        //             width: 894,
-        //             height: 894
-        //         }, {
-        //             src: '/skills/redux.svg',
-        //             width: 894,
-        //             height: 894
-        //         }, {
-        //             src: '/skills/css.svg',
-        //             width: 894,
-        //             height: 894
-        //         }, {
-        //             src: '/skills/typescript.svg',
-        //             width: 894,
-        //             height: 894
-        //         }]
-        //     }
-        // },
+        shape: {
+            type: 'character',
+            character: [
+                {
+                    fill: true,
+                    font: 'Font Awesome 6 Brands',
+                    style: '',
+                    value: ['\uf13b'],
+                    weight: '400',
+                },
+                {
+                    fill: true,
+                    font: 'Font Awesome 6 Brands',
+                    style: '',
+                    value: ['\uf38b'],
+                    weight: '400',
+                },
+                {
+                    fill: true,
+                    font: 'Font Awesome 6 Brands',
+                    style: '',
+                    value: ['\uf3b9'],
+                    weight: '400',
+                },
+                {
+                    fill: true,
+                    font: 'Font Awesome 6 Brands',
+                    style: '',
+                    value: ['\uf41b'],
+                    weight: '400',
+                },
+            ],
+        },
 
-      shape: {
-        type: 'character',
-        character: [
-          {
-            fill: true,
-            font: 'Font Awesome 6 Brands',
-            style: '',
-            value: ['\uf13b'],
-            weight: '400',
-          },
-          {
-            fill: true,
-            font: 'Font Awesome 6 Brands',
-            style: '',
-            value: ['\uf38b'],
-            weight: '400',
-          },
-          {
-            fill: true,
-            font: 'Font Awesome 6 Brands',
-            style: '',
-            value: ['\uf3b9'],
-            weight: '400',
-          },
-          {
-            fill: true,
-            font: 'Font Awesome 6 Brands',
-            style: '',
-            value: ['\uf41b'],
-            weight: '400',
-          },
-        ],
-      },
-  
-      size: {
+        size: {
             random: {
                 enable: true,
                 minimumValue: 25,
