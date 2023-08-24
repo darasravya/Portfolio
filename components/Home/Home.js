@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Typed from "typed.js";
 import { gsap, Linear } from "gsap";
@@ -41,12 +41,12 @@ const Home = ({ skillsRef }) => {
     window.addEventListener("scroll", listenOnScroll);
     return () =>
       window.removeEventListener("scroll", listenOnScroll);
-  }, [])
+  }, [listenOnScroll])
 
-  const listenOnScroll = () => {
+  const listenOnScroll = useCallback(() => {
     isVisible && setIsVisible(false);
     !document.documentElement.scrollTop && setIsVisible(true)
-  }
+  },[isVisible])
 
   return (
     <section

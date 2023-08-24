@@ -10,7 +10,7 @@ const Skills = forwardRef((props, ref) => {
 
   useEffect(function () {
     ref.current = targetSection.current;
-  }, [targetSection.current]);
+  }, [ref]);
 
 
   useEffect(() => {
@@ -84,5 +84,7 @@ const Skills = forwardRef((props, ref) => {
     </section>
   );
 });
+
+Skills.displayName = 'Skills'
 
 export default Skills;
