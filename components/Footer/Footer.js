@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
             <p className="text-center text-white text-sm sm:text-base font-medium tracking-wide mt-8">
               Developed with{" "}
-              <span role="img" aria-label="heart" className="text-xs sm: text-sm animate-pulse">
+              <span role="img" aria-label="heart" className="text-xs sm:text-sm animate-pulse">
                 ❤️
               </span>{" "}
               by Sravya Dara

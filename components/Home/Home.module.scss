@@ -51,7 +51,7 @@
   width: 42px;
   height: 75px;
   position: absolute;
-  bottom: 20px;
+  bottom: calc(100vh - 96%);
   left: calc(50% - 14px);
   cursor: pointer;
 
