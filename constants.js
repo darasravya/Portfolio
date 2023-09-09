@@ -110,7 +110,7 @@ export const TIMELINE = [
   },
   {
     type: NodeTypes.CHECKPOINT,
-    title: "Senior Product Engineer (Current)",
+    title: "Senior Frontend Engineer (Current)",
     size: ItemSize.SMALL,
     subtitle: "Developing UI components, leading projects and mentoring Jr devs",
     image: "/timeline/servify.svg",
