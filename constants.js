@@ -110,9 +110,9 @@ export const TIMELINE = [
   },
   {
     type: NodeTypes.CHECKPOINT,
-    title: "Senior Frontend Engineer (Current)",
+    title: "Frontend Engineer (Current)",
     size: ItemSize.SMALL,
-    subtitle: "Developing UI components, leading projects and mentoring Jr devs",
+    subtitle: "Developed multiple B2B and comsumer web portals for various OEM's like Samsung & Apple.",
     image: "/timeline/servify.svg",
     slideImage: "/timeline/servify.png",
     shouldDrawLine: true,
@@ -130,7 +130,7 @@ export const TIMELINE = [
     title: "Software Engineer",
     size: ItemSize.SMALL,
     subtitle:
-      "Contributed for developing user friendly functionalities on the panels of Printer @ Toshiba 😎",
+      "Developed user friendly functionalities for Printer panels.😎",
     image: "/timeline/toshiba.svg",
     slideImage: "/timeline/tosh.gif",
     shouldDrawLine: true,
